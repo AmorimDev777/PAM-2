@@ -14,7 +14,7 @@ export default function App() {
   .catch(error => console.log('error', error));
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>HELLOW MUNDU</Text>
+      <Text style={styles.text}>Hello Mundo!</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -28,6 +28,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
-    fontSize: 50
+    fontSize: 30
   }
 });
