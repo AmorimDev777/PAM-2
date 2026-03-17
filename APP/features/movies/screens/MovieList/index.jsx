@@ -1,10 +1,35 @@
 import React from "react"
-import { View, Text } from "react-native-web"
+import { View, Text, FlatList } from "react-native"
+import { useNavigation } from "@react-navigation/native"
+import { useMovies } from "../../hooks/useMovies"
+import MovieCard from "../../components/MovieCard"
+import { ROUTES } from "../../../../constants/routes" 
 
-export default function CreateMovie() {
-    return (
-        <View>
-            <Text>Cadastrar Filme</Text>
-        </View>
-    )
+export default function MovieList() {
+   const { movies, loading } = useMovies()
+   const navigation = useNavigation()
+
+   if (loading) { return <Text>Carregando...</Text> }
+
+   return (
+    <View style={{ padding: 16, flex: 1 }}>
+        <FlatList
+            style={{ flex: 1}}
+            data={movies}
+            keyExtractor={item} => {item.id.toString()}
+            numCollumns={2}
+            collumnWrapperStyle={{ justifyContent: "space-around" }}
+            renderItem={{ item }} => (
+                <MovieCard
+                    movie={item}
+                    onPress={() => {
+                        navigation.navigate(ROUTES.MOVIE_DETAILS, {
+                            movie: item
+                        })
+                    }}
+                />
+            )
+        />
+    </View>
+   )
 }
