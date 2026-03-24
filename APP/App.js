@@ -1,22 +1,22 @@
-import { StatusBar } from 'expo-status-bar'
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import AppRoutes from './routes/app.routes'
+import React from "react";
+import AppRoutes from "./routes/app.routes";
 
 export default function App() {
-  return (
-    <AppRoutes />
-  )
+  return <AppRoutes />;
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundImage: 'linear-gradient(to bottom, white, #414141)',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: {
-    fontSize: 30
-  }
-})
+// Usuário toca na tela
+//         ↓
+// Screen (MovieList)
+//         ↓
+// Hook (useMovies)
+//         ↓
+// Service (movieService)
+//         ↓
+// API (api.js / servidor)
+//         ↓
+// Service retorna dados
+//         ↓
+// Hook atualiza estado
+//         ↓
+// Screen renderiza componentes
