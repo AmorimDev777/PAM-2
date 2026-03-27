@@ -1,8 +1,9 @@
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, ScrollView } from "react-native";
 import { useMovies } from "../../hooks/useMovies";
 import MovieCardDetails from "../../components/MovieCardDetails";
 import styles from "./styles";
+import ActorCard from "../../components/ActorCard";
 
 export default function MovieDetails({route}) {
   const {movie} = route.params
@@ -10,12 +11,18 @@ export default function MovieDetails({route}) {
   console.log(movie)
   return (
     
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
+      <View style={{ flex: 1, alignItems: "center" }}>
         <MovieCardDetails
           movie={movie}
-          width={"100%"}
-        />
+          width={"55%"}
+          />
         <Text style={styles.elencoTitulo}>Elenco</Text>
-    </View>
+        <ActorCard
+          movie={movie}
+          width={"100%"}
+          />
+        </View>
+    </ScrollView>
   );
 }

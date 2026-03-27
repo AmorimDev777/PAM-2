@@ -21,7 +21,3 @@ export default StyleSheet.create({
     fontSize: 16
   }
 });
-
-
-
-// { marginBottom: 16, width: width || 170, backgroundColor: "#fff", borderRadius: 8, padding: 8 }

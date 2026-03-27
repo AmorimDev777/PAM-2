@@ -3,6 +3,7 @@ import { View, FlatList, Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useMovies } from "../../hooks/useMovies";
 import MovieCard from "../../components/MovieCard";
+import styles from "./styles";
 import { ROUTES } from "../../../../constants/routes";
 
 export default function MovieList() {
@@ -12,9 +13,9 @@ export default function MovieList() {
   if (loading) { return <Text>Carregando...</Text>;}
 
   return (
-    <View style={{ padding: 16, flex: 1 }}>
+    <View style={{ backgroundColor: "#1d1d1d", padding: 16, flex: 1 }}>
       <FlatList
-        style={{ flex: 1 }}
+        style={{ flex: 1}}
         data={movies}
         keyExtractor={(item) => item.id.toString()}
         numColumns={2}

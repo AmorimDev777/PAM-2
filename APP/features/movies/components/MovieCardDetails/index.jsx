@@ -1,25 +1,25 @@
 import React from "react";
-import { View, Text, Image, TouchableOpacity } from "react-native";
+import { View, Text, Image } from "react-native";
 import styles from "./styles";
 
 export default function MovieCardDetails({ movie, width }) {
   return (
-    <View>
-      <View style={[styles.container, { width: width }]}>        
+    <View style={[styles.container, { width: width }]}>        
         <Image
           source={{ uri: movie.img_capa }}
           style={styles.image}
         />
-        <Text style={styles.title}>
-          {movie.nome}
-        </Text>
-        <Text style={styles.year}>
-          {movie.ano}
-        </Text>
-        <Text style={styles.sinopse}>
-          {movie.sinopse}
-        </Text>
-      </View>
+        <View style={styles.infoContainer}>
+          <Text style={styles.title}>
+            {movie.nome}
+          </Text>
+          <Text style={styles.year}>
+            {movie.ano}
+          </Text>
+          <Text style={styles.sinopse}>
+            {movie.sinopse}
+          </Text>
+        </View>
     </View>
   );
 }

@@ -2,29 +2,41 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
   container: {
+    flexDirection:'row',
+    alignItems: 'center',
     marginBottom: 16,
     backgroundColor: "#fff",
-    borderRadius: 8,
-    padding: 8
+    borderRadius: '1.4vw',
+    padding: '2vw',
+    boxShadow: '0 0 15px black',
+    margin: '0 auto',
+    gap: '1vw'
   },
   image: {
-    width: "100%",
-    height: 300,
-    borderRadius: 8
+    width: "30%",
+    aspectRatio: '1/1',
+    borderRadius: '0.7vw'
+  },
+  infoContainer: {
+    justifyContent: 'center',
+    width: '70%',
+    height: '100%',
+    gap: '1vw'
   },
   title: {
     textAlign: "center",
-    fontSize: 'clamp(18px, 6vw, 22px)',
-    fontWeight: "bold",
-    paddingBlock: 8
+    fontSize: '2vw',
+    fontWeight: "bold"
   },
   year: {
     textAlign: "center",
-    fontSize: 'clamp(16px, 5vw, 18px)'
+    fontWeight: "bold",
+    fontSize: '1.1vw'
   },
   sinopse: { 
     textAlign: "justify",
-    fontSize: 'clamp(16px, 4vw, 18px)'
+    width: '100%',
+    fontSize: '1.2vw'
   },
 });
 
