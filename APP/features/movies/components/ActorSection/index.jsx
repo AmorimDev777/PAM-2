@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, Image } from "react-native";
 import styles from "./styles";
 
-export default function ActorCard({ movie, width }) {
+export default function ActorSection({ movie, width }) {
   return (
     <View style={[styles.atorContainer, { width: width }]}>
         <View style={styles.actorBox}>

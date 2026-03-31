@@ -8,7 +8,7 @@ export default StyleSheet.create({
     borderRadius: '1.4vw',
     padding: '2vw',
     margin: '0 auto',
-    gap: '1vw'
+    gap: '1vw',
   },
   image: {
     width: "50%",
@@ -24,20 +24,20 @@ export default StyleSheet.create({
   title: {
     textAlign: "center",
     fontSize: 20,
-    fontWeight: "bold",
-    color: 'white',
+    fontWeight: 650,
+    color: '#000000',
   },
   year: {
     textAlign: "center",
-    fontWeight: "bold",
+    fontWeight: 600,
     fontSize: 14,
-    color: 'white',
+    color: '#000000',
   },
   sinopse: { 
     textAlign: "justify",
     width: '100%',
     fontSize: 14,
-    color: 'white',
+    color: '#160202',
   },
 });
 

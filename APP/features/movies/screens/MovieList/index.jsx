@@ -10,10 +10,14 @@ export default function MovieList() {
   const { movies, loading } = useMovies();
   const navigation = useNavigation();
 
-  if (loading) { return <Text>Carregando...</Text>;}
+  if (loading) { return (
+    <View style={styles.containerLoading}>
+      <Text style={{ textAlign: "center", marginTop: 20, color: '#000000' }}>Carregando...</Text>
+    </View>
+  );}
 
   return (
-    <View style={{ backgroundColor: "#1d1d1d", padding: 16, flex: 1 }}>
+    <View style={styles.container}>
       <FlatList
         style={{ flex: 1, gap: 20}}
         data={movies}

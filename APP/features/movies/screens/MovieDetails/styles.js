@@ -3,14 +3,14 @@ import { StyleSheet } from "react-native";
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#1d1d1d",
+    backgroundColor: "#ffffff",
     padding: 16,
   },
   elencoTitulo: {
-    fontSize: 26,
-    fontWeight: "bold",
+    fontSize: 34,
+    fontWeight: 700,
     textAlign: "center",
-    color: "#fff",
+    color: "#000000",
     marginBottom: '1%'
   },
 });

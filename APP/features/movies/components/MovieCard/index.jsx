@@ -16,8 +16,6 @@ export default function MovieCard({ movie, onPress, width }) {
         <Text style={styles.year}>
           {movie.ano}
         </Text>
-
-
       </View>
     </TouchableOpacity>
   );

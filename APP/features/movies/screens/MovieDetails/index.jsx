@@ -3,12 +3,10 @@ import { View, Text, Image, ScrollView } from "react-native";
 import { useMovies } from "../../hooks/useMovies";
 import MovieCardDetails from "../../components/MovieCardDetails";
 import styles from "./styles";
-import ActorCard from "../../components/ActorCard";
+import ActorSection from "../../components/ActorSection";
 
-export default function MovieDetails({route}) {
-  const {movie} = route.params
-
-  console.log(movie)
+export default function MovieDetails(prop) {
+  const {movie} = prop.route.params
   return (
     
     <ScrollView style={styles.container}>
@@ -18,7 +16,7 @@ export default function MovieDetails({route}) {
           width={"100%"}
         />
         <Text style={styles.elencoTitulo}>Elenco</Text>
-        <ActorCard
+        <ActorSection
           movie={movie}
           width={"100%"}
         />

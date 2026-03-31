@@ -14,30 +14,32 @@ export default StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'space-between',
         boxSizing: 'border-box',
-        backgroundColor: 'white',
         alignItems: "center",
         width: "31%",
         marginBottom: '4%',
         padding: '2vw',
         borderRadius: '2vw',
-        boxShadow: '0 0 15px black',
-        gap: 10
+        backgroundColor: "#ffffff",
+        border: '1px solid #ffffff',
     },
     image: {
         objectFit: 'cover',
         width: '100%',
         aspectRatio: '1/1',
-        borderRadius: '1vw',
-        marginBottom: 8
+        borderRadius: '50rem',
+        border: '1px solid #ffffff',
+        marginBottom: 8,
+    
     },
     actorName: {
         fontSize: 12,
         fontWeight: 600,
+        color: '#000000',
         textAlign: "center"
     },
     actorPersonagem: {
         fontSize: 11,
         textAlign: "center",
-        color: '#2c2c2c'
+        color: '#000000',
     }
 });

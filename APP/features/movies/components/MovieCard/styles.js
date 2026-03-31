@@ -1,23 +1,35 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Platform } from "react-native";
 
 export default StyleSheet.create({
   container: {
-    marginBottom: 16,
-    backgroundColor: "#fff",
-    borderRadius: 8,
-    padding: 8
+    backgroundColor: "#ffffff",
+    borderRadius: 6, 
+    marginBottom: 20,
+    boxShadow: '0 5px 10px #00000037',
   },
   image: {
     width: "100%",
-    aspectRatio: '1/1.8',
-    borderRadius: 8
+    aspectRatio: 2 / 3, 
+    borderRadius: 6,
+    borderBottomLeftRadius: 0,
+    borderBottomRightRadius: 0,
+    backgroundColor: "#eceaea",
+  },
+  textContainer: {
+    marginTop: 10,
   },
   title: {
-    fontSize: 18,
+    fontSize: 14,
     fontWeight: "bold",
-    paddingBlock: 8
+    color: "#000000",
+    lineHeight: 22,
+    marginHorizontal: 8,
+    marginTop: 8
   },
   year: {
-    fontSize: 16
+    fontSize: 14,
+    color: "#000000",
+    marginHorizontal: 8,
+    marginBottom: 8
   }
 });
