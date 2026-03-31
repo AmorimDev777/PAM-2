@@ -15,7 +15,7 @@ export default function MovieList() {
   return (
     <View style={{ backgroundColor: "#1d1d1d", padding: 16, flex: 1 }}>
       <FlatList
-        style={{ flex: 1}}
+        style={{ flex: 1, gap: 20}}
         data={movies}
         keyExtractor={(item) => item.id.toString()}
         numColumns={2}
@@ -28,7 +28,7 @@ export default function MovieList() {
                 movie: item,
               })
             }
-            width={"45vw"}
+            width={"40vw"}
           />
         )}
       />

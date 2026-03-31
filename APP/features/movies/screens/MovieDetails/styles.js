@@ -7,7 +7,7 @@ export default StyleSheet.create({
     padding: 16,
   },
   elencoTitulo: {
-    fontSize: '4vw',
+    fontSize: 26,
     fontWeight: "bold",
     textAlign: "center",
     color: "#fff",

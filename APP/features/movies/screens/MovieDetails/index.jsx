@@ -15,13 +15,13 @@ export default function MovieDetails({route}) {
       <View style={{ flex: 1, alignItems: "center" }}>
         <MovieCardDetails
           movie={movie}
-          width={"55%"}
-          />
+          width={"100%"}
+        />
         <Text style={styles.elencoTitulo}>Elenco</Text>
         <ActorCard
           movie={movie}
           width={"100%"}
-          />
+        />
         </View>
     </ScrollView>
   );

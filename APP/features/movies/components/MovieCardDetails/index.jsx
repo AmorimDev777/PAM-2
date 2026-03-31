@@ -9,17 +9,15 @@ export default function MovieCardDetails({ movie, width }) {
           source={{ uri: movie.img_capa }}
           style={styles.image}
         />
-        <View style={styles.infoContainer}>
-          <Text style={styles.title}>
-            {movie.nome}
-          </Text>
-          <Text style={styles.year}>
-            {movie.ano}
-          </Text>
-          <Text style={styles.sinopse}>
-            {movie.sinopse}
-          </Text>
-        </View>
+        <Text style={styles.title}>
+          {movie.nome}
+        </Text>
+        <Text style={styles.year}>
+          {movie.ano}
+        </Text>
+        <Text style={styles.sinopse}>
+          {movie.sinopse}
+        </Text>
     </View>
   );
 }

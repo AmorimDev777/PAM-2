@@ -2,12 +2,13 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
     atorContainer: {
-        padding: 12,
+        padding: 8,
     },
     actorBox: {
+        margin: 0,
         flexDirection: "row",
         flexWrap: "wrap",
-        gap: '4%'
+        gap: '3%'
     },
     actorCard: {
         flexDirection: 'column',
@@ -15,7 +16,7 @@ export default StyleSheet.create({
         boxSizing: 'border-box',
         backgroundColor: 'white',
         alignItems: "center",
-        width: "22%",
+        width: "31%",
         marginBottom: '4%',
         padding: '2vw',
         borderRadius: '2vw',
@@ -30,13 +31,12 @@ export default StyleSheet.create({
         marginBottom: 8
     },
     actorName: {
-        fontSize: '1.4vw',
-        fontWeight: "bold",
+        fontSize: 12,
+        fontWeight: 600,
         textAlign: "center"
     },
     actorPersonagem: {
-        fontSize: '1.4vw',
-        fontWeight: "bold",
+        fontSize: 11,
         textAlign: "center",
         color: '#2c2c2c'
     }

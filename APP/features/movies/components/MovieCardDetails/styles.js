@@ -2,19 +2,17 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
   container: {
-    flexDirection:'row',
     alignItems: 'center',
+    justifyContent: 'space-between',
     marginBottom: 16,
-    backgroundColor: "#fff",
     borderRadius: '1.4vw',
     padding: '2vw',
-    boxShadow: '0 0 15px black',
     margin: '0 auto',
     gap: '1vw'
   },
   image: {
-    width: "30%",
-    aspectRatio: '1/1',
+    width: "50%",
+    aspectRatio: '1/1.5',
     borderRadius: '0.7vw'
   },
   infoContainer: {
@@ -25,18 +23,21 @@ export default StyleSheet.create({
   },
   title: {
     textAlign: "center",
-    fontSize: '2vw',
-    fontWeight: "bold"
+    fontSize: 20,
+    fontWeight: "bold",
+    color: 'white',
   },
   year: {
     textAlign: "center",
     fontWeight: "bold",
-    fontSize: '1.1vw'
+    fontSize: 14,
+    color: 'white',
   },
   sinopse: { 
     textAlign: "justify",
     width: '100%',
-    fontSize: '1.2vw'
+    fontSize: 14,
+    color: 'white',
   },
 });
 
