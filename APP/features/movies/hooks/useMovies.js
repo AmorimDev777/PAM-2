@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getMovies } from "../services/movieService";
+import { getPopularMovies} from "../services/movieService";
 
 export const useMovies = () => {
   const [movies, setMovies] = useState([]);
@@ -7,7 +7,7 @@ export const useMovies = () => {
 
   const fetchMovies = async () => {
     try {
-      const data = await getMovies();
+      const data = await getPopularMovies();
       setMovies(data);
     } catch (error) {
       console.log("Erro ao buscar filmes:", error);

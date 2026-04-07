@@ -10,6 +10,8 @@ export default function MovieList() {
   const { movies, loading } = useMovies();
   const navigation = useNavigation();
 
+  console.log(movies);
+
   if (loading) { return (
     <View style={styles.containerLoading}>
       <Text style={{ textAlign: "center", marginTop: 20, color: '#000000' }}>Carregando...</Text>
