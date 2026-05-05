@@ -1,27 +1,23 @@
 import React from "react";
-import { View, FlatList, Text } from "react-native";
+import { View, FlatList } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useMovies } from "../../hooks/useMovies";
 import MovieCard from "../../components/MovieCard";
-import styles from "./styles";
+import Loading from "../../../../components/Loading";
 import { ROUTES } from "../../../../constants/routes";
 
 export default function MovieList() {
   const { movies, loading } = useMovies();
   const navigation = useNavigation();
 
-  console.log(movies);
-
-  if (loading) { return (
-    <View style={styles.containerLoading}>
-      <Text style={{ textAlign: "center", marginTop: 20, color: '#000000' }}>Carregando...</Text>
-    </View>
-  );}
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
-    <View style={styles.container}>
+    <View style={{ padding: 16, flex: 1 }}>
       <FlatList
-        style={{ flex: 1, gap: 20}}
+        style={{ flex: 1 }}
         data={movies}
         keyExtractor={(item) => item.id.toString()}
         numColumns={2}
@@ -30,11 +26,9 @@ export default function MovieList() {
           <MovieCard
             movie={item}
             onPress={() =>
-              navigation.navigate(ROUTES.MOVIE_DETAILS, {
-                movie: item,
-              })
+              navigation.navigate(ROUTES.MOVIE_DETAILS, {movie_id: item.id})
             }
-            width={"40vw"}
+            width={"45vw"}
           />
         )}
       />
